@@ -16,10 +16,18 @@ java {
 
 repositories {
     mavenCentral()
+    maven(url = "https://aws.oss.sonatype.org/content/repositories/snapshots/")
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
+    // opensearch
+    implementation("org.opensearch.client:spring-data-opensearch-starter:1.3.0")
+    implementation("org.opensearch.client:spring-data-opensearch:1.3.0")
+    implementation("org.opensearch.client:opensearch-java:2.9.1")
+    implementation("org.apache.httpcomponents.client5:httpclient5:5.3.1")
+    implementation("software.amazon.awssdk:opensearch:2.17.65")
+    implementation("software.amazon.awssdk:url-connection-client:2.17+")
+
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
