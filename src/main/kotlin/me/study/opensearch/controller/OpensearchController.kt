@@ -26,18 +26,8 @@ class OpensearchController(
         }
 
         val createIndexRequest = CreateIndexRequest(name)
-        /*
-        ### Add if you are using replica set
-        createIndexRequest.settings(
-            Settings.builder()
-                .put("index.number_of_shards", 3)
-                .put("index.number_of_replicas", 2)
-        )
-         */
-
         val indexResponse = opensearchClient.indices().create(createIndexRequest, RequestOptions.DEFAULT)
         println("Index creation response: $indexResponse")
-
 
         return ResponseEntity.status(HttpStatus.CREATED).body("Index=`${name}` created successfully.")
     }
