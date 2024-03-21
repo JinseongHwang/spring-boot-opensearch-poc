@@ -9,5 +9,4 @@ class SpringBootOpensearchPocApplicationTests {
     @Test
     fun contextLoads() {
     }
-
 }

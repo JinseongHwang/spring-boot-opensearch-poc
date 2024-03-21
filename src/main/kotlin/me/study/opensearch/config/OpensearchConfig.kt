@@ -11,7 +11,6 @@ import org.opensearch.data.client.orhlc.AbstractOpenSearchConfiguration
 import org.springframework.context.annotation.Configuration
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories
 
-
 @Configuration
 @EnableElasticsearchRepositories
 class OpensearchConfig(

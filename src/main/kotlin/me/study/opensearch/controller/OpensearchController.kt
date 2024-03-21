@@ -1,6 +1,5 @@
 package me.study.opensearch.controller
 
-
 import org.opensearch.client.RequestOptions
 import org.opensearch.client.RestHighLevelClient
 import org.opensearch.client.indices.CreateIndexRequest
@@ -29,6 +28,6 @@ class OpensearchController(
         val indexResponse = opensearchClient.indices().create(createIndexRequest, RequestOptions.DEFAULT)
         println("Index creation response: $indexResponse")
 
-        return ResponseEntity.status(HttpStatus.CREATED).body("Index=`${name}` created successfully.")
+        return ResponseEntity.status(HttpStatus.CREATED).body("Index=`$name` created successfully.")
     }
 }

@@ -5,10 +5,12 @@ import org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDa
 import org.springframework.boot.autoconfigure.elasticsearch.ElasticsearchRestClientAutoConfiguration
 import org.springframework.boot.runApplication
 
-@SpringBootApplication(exclude = [
-    ElasticsearchDataAutoConfiguration::class,
-    ElasticsearchRestClientAutoConfiguration::class,
-])
+@SpringBootApplication(
+    exclude = [
+        ElasticsearchDataAutoConfiguration::class,
+        ElasticsearchRestClientAutoConfiguration::class,
+    ]
+)
 class SpringBootOpensearchPocApplication
 
 fun main(args: Array<String>) {
